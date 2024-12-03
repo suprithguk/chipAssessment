@@ -1,4 +1,4 @@
-describe('OpenWeatherMap API Happy Path Tests', () => {
+describe('OpenWeatherMap API Positive and Negative Tests', () => {
     const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
     const apiKey = '5ced3e345129c9a95266db91a02eeaea';
     const validLat = 44.34;

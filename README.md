@@ -1,5 +1,5 @@
 # chipAssessment
-This is a project created solely as an assessment for organization ATMECS. This doesn't use any proprietary softwares.
+This is a project created solely as an assessment for organization CHIP. Here we will automate few happy path and negative scenarios for openweathermap.org application. This project doesn't use any proprietary softwares.
 
 ### Author
 Suprith Gangawar <suprithguk@gmail.com>
@@ -9,6 +9,8 @@ npm
 cypress
 typescript
 cypress-mochawesome-reporter
+API key of the account on openweathermap.org
+Jenkins configured and nodeJS plugin installed in Jenkins
 
 ### Installation and Usage
 Clone the repo: 
@@ -19,6 +21,8 @@ $ npm i
 $ npm install typescript --save-dev
 $ npm install cypress --save-dev
 $ npm install cypress-mochawesome-reporter --save-dev
+
+Create an account on openweathermap.org and after login click on the profile on top right of the application and select 'My API keys'. Provide a name for the key and click on Generate to create a new API key. This will be required as a parameter for interacting with the APIs.
 
 To run spec files through cypress UI:
 $ npx cypress open
@@ -50,4 +54,4 @@ downloads/ - Location to store any downloaded data during your testing
 
 ### Reporting
 html reports are generated when you run the spec files through command line at:
-chipAssessment/cypress/reports/html/index.html
+chipAssessment/cypress/reports/html/index.html. Additionally, a stage has been added in the Jenkinsfile to inhibit the inbuilt Jenkins HTML publisher plugin to generate a HTML report within Jenkins.
