@@ -32,29 +32,21 @@ $ npx cypress run --spec cypress/e2e/weatherApi.cy.ts\
 
 ### Important Files/Folders
 package.json - Readable information about the project, author, dependencies etc,.
-
 cypress.config.ts - To add cypress specific configurations if any\
-
 Jenkinsfile - To import and run the test cases in Jenkins CI/CD platform. Its just a sample file and not tested. Usually this becomes the entry point to the project.\
-
 support/e2e.ts - To import all required global configuration\
-
 support/commands.ts - Reusable commands to keep test cases short and readable\
-
 support/apiUtils.ts - Reusable utilities to mock server responses\
-
 screenshots/ - To store screenshots taken during the testing\
-
 reports/html/index.html - HTML report to view the status in browser. This is created by cypress-mochawesome-reporter post every run. Overwrites the previous report.\
-
 fixtures/ - Contains files in .csv or .json format to import as test data to later use in your test cases.\
-
 fixtures/products.json - Contains brand, product and category information to search and assert in the browser\
-
 e2e/weatherApi.cy.ts - Test case file for all positive and negative scenarios\
-
 e2e/mockTests.cy.ts - Mock test cases which use the apiTests.ts utils file\
 downloads/ - Location to store any downloaded data during your testing\
+
+### CI/CD with Jenkins
+To run the code in CI/CD, copy the content of the Jenkinsfile in the repo and create a Pipeline job in a Jenkins instance and paste the copied content to the script section. This job will clone the repo, install pre requisites, run the tests and generate reports. \
 
 ### Reporting
 html reports are generated when you run the spec files through command line at:
